@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> -->
+<script src= "angular-1.3.js"></script>
+<!-- <script src="angularJs-1.0.js"></script> -->
+</head>
+
+<body>
+<div ng-app="test">
+<div ng-controller="PersonController">
+<button increasea>increase a</button>
+<button myClick>Click Me</button>
+	<p>Input something in the input box:</p>
+	<p>Name: <input type="text" ng-model="name" value="John"></p>
+	<p ng-bind="name"></p>
+	
+	
+	First Name: <input type="text" ng-model="firstName"><br>
+	Last Name: <input type="text" ng-model="lastName"><br>
+	<br>
+	Full Name: {{firstName + " " + lastName}}
+	<button cDirective>Click Me</button>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	var index = 0;
+	var ngApp = angular.module('test', []);
+	ngApp.directive("increasea", function() {
+	    return function (scope, element, attr) {
+	        element.on("click", function() {
+	            scope.a++;
+	            scope.$digest();
+	        });
+	    };
+	});
+	ngApp.directive('myclick', function () {
+	    console.log(arguments);
+	    return function (scope, element, attr) {
+	        console.log(arguments);
+	        element.on('click', function () {
+	            index++;
+	            scope.firstName = scope.firstName + index;
+	            scope.$apply(function () {
+	                scope.firstName = scope.firstName + index;
+	            });
+	        });
+		};
+	});
+	ngApp.controller("PersonController", function($scope) {
+	    $scope.firstName= "_John_";
+	    $scope.lastName= "_Doe_";
+	});
+</script>
+</html>

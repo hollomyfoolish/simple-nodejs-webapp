@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script> -->
+<script>
+	function personController($scope) {
+	    $scope.firstName= "John";
+	    $scope.lastName= "Doe";
+	}
+	function ActivitiesListCtrl($scope) { 
+	    $scope.activities = [ 
+	      { "name": "Wake up" }, 
+	      { "name": "Brush teeth" }, 
+	      { "name": "Shower" }, 
+	      { "name": "Have breakfast" }, 
+	      { "name": "Go to work" }, 
+	      { "name": "Write a Nettuts article" }, 
+	      { "name": "Go to the gym" }, 
+	      { "name": "Meet friends" }, 
+	      { "name": "Go to bed" } 
+	    ]; 
+	   } 
+</script>
+<!-- <script src="angular-1.3.js"></script> -->
+<script src="angularJs-1.0.js"></script>
+</head>
+
+<body ng-controller="ActivitiesListCtrl">
+  <h1>Today's activities</h1> 
+  <ul> 
+   <li ng-repeat="activity in activities"> 
+     {{activity.name}} 
+   </li> 
+  </ul> 
+</body>
+</html>

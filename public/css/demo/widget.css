@@ -1,0 +1,100 @@
+/*!
+ * common site style
+ */ 
+.es_widget {
+	border: 1px solid #d9d9d9;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	background-color: #ffffff;
+}
+
+.es_widget .button_bar {
+	position: absolute;
+	width: 24px;
+	height: 48px;
+	top: 4%;
+	right: -26px;
+	overflow: hidden;
+}
+
+.es_widget .button_bar .refresh {
+	width: 24px;
+	height: 24px;
+	background: url(../../images/refresh_icon.png) center center no-repeat;
+	background-size: 16px 15px;
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.es_widget .button_bar .refresh:hover {
+	background-image: url(../../images/refresh_icon_active.png);
+}
+
+.es_widget .button_bar .edit {
+	width: 24px;
+	height: 24px;
+	background: url(../../images/EditButton-inactive.png) center center no-repeat;
+	background-size: 13px 13px;
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	top: 23px;
+	left: 0;
+}
+
+.es_widget .button_bar .edit:hover {
+	background-image: url(../../images/EditButton-active.png);
+}
+
+.es_widget>.loading, .es_widget_editor>.loading {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	background: url(../../images/loading.gif) center center no-repeat;
+	background-size: 36px 36px;
+}
+
+.es_widget iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.kpi_container {
+	width: 340px;
+	height: 213px;
+}
+
+.pdashboard_container {
+	width: 530px;
+	height: 210px;
+}
+
+.es_widget_editor {
+	width: 100%;
+	height: 100%;
+}
+
+.es_widget_editor p,.es_widget_editor iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.es_widget_editor_dialog .ui-dialog-title {
+	font-size: 14px;
+}
+
+.es_widget_editor_dialog .ui-dialog-titlebar {
+	padding: 2px;
+}

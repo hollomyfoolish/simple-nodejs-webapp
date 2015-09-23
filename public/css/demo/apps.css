@@ -1,0 +1,813 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+[hidden] {
+	display: none;
+}
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:active, a:hover {
+	outline: 0;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+code, kbd, pre, samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+pre {
+	white-space: pre-wrap;
+}
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 0;
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+legend {
+	border: 0;
+	padding: 0;
+}
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: 100%;
+	margin: 0;
+}
+button, input {
+	line-height: normal;
+}
+button, select {
+	text-transform: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.clearfix:before, .clearfix:after {
+	content: '';
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+
+body.demo-2 {
+	background: #3498db;
+}
+
+.container {
+	overflow: hidden;
+	height: 100%;
+}
+
+a {
+	color: rgba(0,0,0,0.4);
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #fff;
+}
+
+.codrops-header {
+	margin: 0 auto;
+	padding: 2em;
+	text-align: center;
+}
+
+.codrops-header h1 {
+	margin: 0;
+	font-weight: 300;
+	font-size: 2.6em;
+}
+
+.codrops-header h1 span {
+	display: block;
+	padding: 0.3em 0 2em;
+	font-size: 0.45em;
+}
+
+.codrops-demos a {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin: 10px;
+}
+
+.codrops-demos a.current-demo {
+	color: #fff;
+}
+
+.codrops-top {
+	width: 100%;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.69em;
+	line-height: 2.2;
+}
+
+.codrops-top a {
+	display: inline-block;
+	padding: 0 1em;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
+
+.codrops-top span.right {
+	float: right;
+}
+
+.codrops-top span.right a {
+	display: block;
+	float: left;
+}
+
+.codrops-icon:before {
+	margin: 0 4px;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+section {
+	font-size: 1.5em;
+	height: 100%;
+}
+
+.related > a {
+	border: 3px solid rgba(0,0,0,0.4);;
+	display: inline-block;
+	text-align: center;
+	margin: 20px 10px;
+	padding: 25px;
+	-webkit-transition: color 0.3s, border-color 0.3s;
+	transition: color 0.3s, border-color 0.3s;
+}
+
+.related a:hover {
+	border-color: #fff;
+}
+
+.related a img {
+	max-width: 100%;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.related a:hover img, .related a:active img {
+	opacity: 1;
+}
+
+.related a h3 {
+	margin: 0;
+	padding: 0.5em 0 0.3em;
+	max-width: 300px;
+	text-align: left;
+	font-size: 0.75em;
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+.grid-wrap {
+	margin: 10px auto 0;
+	width: 100%;
+	padding: 0;
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+}
+
+.grid {
+	position: relative;
+	-webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	overflow: auto;
+}
+
+.view-full .grid {
+	overflow: hidden;
+	height: 100%;
+}
+
+.grid figure, .grid .placeholder {
+	width: 340px;
+	height: 300px;
+}
+
+.grid figure {
+	margin: 10px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.grid figure.active {
+	opacity: 0;
+}
+
+.grid .placeholder {
+	pointer-events: none;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.placeholder > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.placeholder .front img {
+	width: 100%;
+	height: 100%;
+}
+
+.placeholder .back {
+	background: white;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.view-full .placeholder {
+	-webkit-transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+}
+
+.vertical .view-full .placeholder {
+	-webkit-transform: translateZ(1500px) rotateX(-179.9deg);
+	transform: translateZ(1500px) rotateX(-179.9deg);
+}
+
+.horizontal .view-full .placeholder {
+	-webkit-transform: translateZ(1500px) rotateY(-179.9deg);
+	transform: translateZ(1500px) rotateY(-179.9deg);
+}
+
+.grid figure img {
+	display: block;
+	width: 100%;
+}
+
+.content, .loading {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+	pointer-events: none;
+}
+
+.content {
+	overflow-y: scroll;
+	height: 0;
+	background: #fff;
+	visibility: hidden;
+	z-index: 400;
+	-webkit-overflow-scrolling: touch;
+}
+
+.loading {
+	opacity: 0;
+	z-index: 1;
+	background: transparent url(../../images/preloader.gif) no-repeat center center;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.loading.show {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.content.show {
+	height: auto;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.content > div {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	background: #fff;
+}
+
+.content > div.show {
+	height: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.icon:before {
+	font-family: 'fontawesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.close-content {
+	position: fixed;
+	z-index: 1000;
+	top: 50;
+	right: 25px;
+	color: #aaa;
+	cursor: pointer;
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	background: url(../../images/removeIcon.png);
+	width: 16px;
+	height: 16px;
+}
+
+.closebtn {
+	position: fixed;
+	z-index: 1000;
+	top: 150;
+	right: 25px;
+	color: #aaa;
+	cursor: pointer;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	background: url(../../images/removeIcon.png);
+	width: 16px;
+	height: 16px;
+}
+
+.installAppBtn {
+	position: absolute;
+	z-index: 1000;
+	top: 20px;
+	right: 25px;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	background: url(../../images/add_new2.png);
+	width: 32px;
+	height: 32px;
+}
+
+.close-content:hover {
+	color: #999;
+}
+
+.content > div.show ~
+.close-content {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.close-content:before {
+	content: "\e602";
+}
+
+/* Dummy content */
+
+.dummy-img, .dummy-text {
+	max-width: 900px;
+	width: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+	padding: 10px;
+}
+
+.vertical .dummy-img, .vertical .dummy-text {
+	-webkit-transform: translateY(100px);
+	transform: translateY(100px);
+}
+
+.horizontal .dummy-img, .horizontal .dummy-text {
+	-webkit-transform: translateX(-100px);
+	transform: translateX(-100px);
+}
+
+.content > div.show .dummy-img, .content > div.show .dummy-text {
+	opacity: 1;
+}
+
+.vertical .content > div.show .dummy-img, .vertical .content > div.show .dummy-text {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
+.horizontal .content > div.show .dummy-img, .horizontal .content > div.show .dummy-text {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+p.dummy-text:nth-child(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+p.dummy-text:nth-child(3) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.dummy-img {
+	max-height: 900px;
+	height: 70%;
+	min-height: 500px;
+	background-color: #ddd;
+	margin: 0 auto;
+}
+
+.dummy-text {
+	text-align: left;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #ddd;
+	font-size: 1em;
+	font-family: 'Blokk', Arial, serif;
+}
+
+.dummy-text:last-child {
+	padding-bottom: 100px;
+}
+
+/* Simple fallback */
+/* if any of these are not supported, a simple fallback will be shown */
+.no-pointerevents .content, .no-csstransforms3d .content, .no-csstransitions .content, .no-pointerevents .content > div, .no-csstransforms3d .content > div, .no-csstransitions .content > div, .no-pointerevents .close-content, .no-csstransforms3d .close-content, .no-csstransitions .close-content {
+	opacity: 1;
+	visibility: visible;
+	display: none;
+	height: auto;
+}
+
+.no-pointerevents .show .close-content, .no-csstransforms3d .show .close-content, .no-csstransition .show .close-content, .no-pointerevents div.show, .no-csstransforms3d div.show, .no-csstransitions div.show, .no-csstransitions .dummy-img, .no-csstransitions .dummy-text, .no-csstransforms3d .dummy-img, .no-csstransforms3d .dummy-text, .no-pointerevents .dummy-img, .no-pointerevents .dummy-text {
+	display: block !important;
+	opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+
+	.grid figure, .grid .placeholder {
+		width: 240px;
+		height: 212px;
+	}
+}
+
+.codrops-header {
+	margin-top: 60px;
+}
+.codrops-demos {
+	margin: 20px;
+}
+.grid-wrap {
+	height: 100%;
+}
+.grid .figure, .grid .placeholder {
+	display: inline-block;
+	width: 180px;
+	height: 180px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 8px;
+	background: url(../../images/main-bg.png) repeat;
+	background-color: #f1f1f1 ;
+	margin: 5px;
+}
+
+.figure > img {
+	width: 128px;
+	height: 128px;
+	float: left;
+}
+
+.card {
+	width: 0;
+	height: 0;
+	background: rgba(255,255,255,0.98);
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: width 0.2s, height 0.2s, left 0.2s, top 0.2s;
+}
+
+.guide {
+	width: 700px;
+	height: 700px;
+	background: rgba(255,255,255,0.98);
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transition: width 0.2s, height 0.2s, left 0.2s, top 0.2s;
+	padding: 10px;
+}
+
+.dummy-img {
+	border: 1px solid gold;
+}
+
+.dummy-img > .xapp {
+	width: 300px;
+	height: 100%;
+	border-right: 1px solid #ffffff;
+	float: left;
+}
+
+.dummy-img > .lightApps {
+	height: 100%;
+	float: left;
+	width: calc(100% - 310px);
+	margin-left: 10px;
+}
+
+.lightApps img {
+	width: 64px;
+	height: 64px;
+	margin: 10px;
+	cursor: pointer;
+	float: left;
+}
+
+.lightApps > div {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	border: 1px solid #BBB;
+	border-radius: 10px;
+	height: 150px;
+	margin: 10px;
+	padding: 5px;
+	box-shadow: 1px 0.5px 0.5px 0.5px #bbb;
+}
+
+.lightApps ul {
+	float: left;
+	margin-left: 10px;
+}
+
+.dummy-img > .addLightApp {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.addLightApp > img {
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+
+.xapp {
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+.xapp > div {
+	margin-top: 5px;
+}
+
+.xapp > img.icon {
+	width: 256px;
+	height: 256px;
+	border: 1px dashed #bbb;
+}
+
+.xapp > div.name {
+	font-weight: bold;
+}
+
+.xapp > div.desc {
+	
+}
+
+.xapp > div.labl {
+	height: 60px;
+}
+
+.xapp > div.labl > span {
+	border-bottom: 1px solid;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.xapp .ctent {
+	margin: 0 0 0 10px;
+}
+
+.card > .icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.card > .iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.card > .iframe > iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.guide > span.icon {
+	opacity: 1;
+	position: inherit;
+	right: 0;
+	top: 0;
+}
+
+.newIcon {
+	background-image: url(../../images/icons.jpg);
+	background-repeat: no-repeat;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+}
+
+.plus {
+	background-position: -146px -140px;
+	vertical-align: top;
+	margin-left: 10px;
+}
+
+.guide input {
+	height: 25px;
+}
+
+.guide li {
+	position: relative;
+	padding: 8px;
+	border: 1px solid #BBB;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+div.homeURL > span.url {
+	text-decoration: underline;
+}
+
+input {
+	-webkit-appearance: textfield;
+	padding: 1px;
+	background-color: white;
+	border: 2px inset;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	-webkit-rtl-ordering: logical;
+	-webkit-user-select: text;
+	cursor: auto;
+}
+
+.completed{
+	background: url(../../images/tick_circle.png) no-repeat;
+}
