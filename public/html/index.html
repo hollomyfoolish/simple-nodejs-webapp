@@ -3,8 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>Hello World!</title>
+    <script type="text/javascript" src="../js/jquery.js"></script>
 </head>
 <body>
     <h1>Hello World!</h1>
+    <button id="btn">click me</button>
+    <script type="text/javascript">
+        var index = 1;
+        $('#btn').click(function(){
+            $('body').append('<h2>' + (index++) + '</h2>');
+        });
+    </script>
 </body>
 </html>

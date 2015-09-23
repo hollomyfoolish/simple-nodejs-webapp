@@ -5,12 +5,12 @@ var http = require('http'),
     formidable = require('formidable'),
     routers = require('./routers/routers.js');
 
-function  getContentType(req){
+function getContentType(req){
     let contentType = req.headers['content-type'] || '';
     return contentType.split(';')[0];
 }
 
-var server = http.createServer(function(req, res){
+http.createServer(function(req, res){
     let url = urlParser.parse(req.url, true),
         method = req.method.toLowerCase(),
         contentType = getContentType(req);
@@ -29,8 +29,7 @@ var server = http.createServer(function(req, res){
     req.params = urlParser.parse(req.url, true).query;
     routers.getService(url.pathname)(req, res);
     return;
-});
+}).listen(18080);
 
-server.listen(18080);
 console.log('server run in port: 18080');
 
