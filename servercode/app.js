@@ -1,35 +1,22 @@
 'use strict';
-var http = require('http'),
-    fs = require('fs'),
-    urlParser = require('url'),
-    formidable = require('formidable'),
-    routers = require('./routers/routers.js');
+var net = require('net'),
+    cp = require('child_process'),
+    os = require('os');
 
-function getContentType(req){
-    let contentType = req.headers['content-type'] || '';
-    return contentType.split(';')[0];
-}
+var cpuNums = os.cpus().length;
+var server = net.createServer();
 
-http.createServer(function(req, res){
-    let url = urlParser.parse(req.url, true),
-        method = req.method.toLowerCase(),
-        contentType = getContentType(req);
-
-    req.pathname = url.pathname;
-    if(method === 'post' && (contentType.indexof('application/x-www-form-urlencoded') >= 0 || contentType.indexof('multipart/form-data') >= 0)){
-        let form = new formidable.IncomingForm();
-        form.parse(req, function(err, fields, files){
-            req.params = fields;
-            req.files = files;
-            routers.getAction(req.url)(req, res);
-        });
-        return;
+console.log('%s cpus in this server', cpuNums);
+server.listen(18888, function(){
+    console.log(arguments);
+    try{
+        for(let i = 0; i < cpuNums; i++){
+            cp.fork('./http-server.js').send('master', server);
+        }
+    }catch(e){
+        console.error(e);
     }
-
-    req.params = urlParser.parse(req.url, true).query;
-    routers.getService(url.pathname)(req, res);
-    return;
-}).listen(18080);
-
-console.log('server run in port: 18080');
+    console.log('server run in port: %s', 18888);
+    server.close();
+});
 
