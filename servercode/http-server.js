@@ -21,7 +21,7 @@ var worker = http.createServer(function(req, res){
         form.parse(req, function(err, fields, files){
             req.params = fields;
             req.files = files;
-            routers.getAction(req.url)(req, res);
+            routers.getService(req.url)(req, res);
         });
         return;
     }

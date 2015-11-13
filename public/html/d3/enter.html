@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to D3</title>
+    <link rel="stylesheet" type="text/css" href="./css/d3.css">
+    <script type="text/javascript" src="./lib/d3.js"></script>
+</head>
+<body>
+    <p><a href="#">default 1</a></p>
+    <p>default 2</p>
+    <p>default 3</p>
+    <p>default 4</p>
+    <button id="remove">remove</button>
+    <script type="text/javascript">
+        // Update…
+        var p = d3.select("body").selectAll("p")
+            .data([4, 8, 15, 16, 23, 42, 23, 42])
+            .text(function(d) {return this.innerText + '->' + d; });
+
+        // Enter…
+        p.enter().append("p")
+            .text(function(d) { return d; });
+
+        // Exit…
+        // p.exit().remove();
+        d3.select('#remove').onclick = e => {console.log(hello);d3.select("body").selectAll("p").exit().remove();};
+    </script>
+</body>
+</html>
