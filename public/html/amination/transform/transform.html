@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Amination</title>
+    <link rel="stylesheet" type="text/css" href="./transform.css">
+    <style type="text/css">
+        .card{
+            position: relative;
+            margin: auto;
+            width: 200px;
+            height: 300px;
+            background-color: gray;
+        }
+        .text-center{
+
+        }
+        .stage {
+            width: 300px;
+            height: 300px;
+            float: left;
+            margin: 15px;
+            position: relative;
+            background: url(http://www.w3cplus.com/sites/default/files/blogs/2013/1311/bg.jpg) repeat center center;
+
+            -webkit-perspective: 1200px;
+            -moz-perspective: 1200px;
+            -ms-perspective: 1200px;
+            -o-perspective: 1200px;
+            perspective: 1200px;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        .container img {
+            position: absolute;
+            margin-left: -35px;
+            margin-top: -50px; 
+        }
+        .container img:nth-child(1){
+            z-index: 1;
+            opacity: .6;
+        }
+        .s1 img:nth-child(2){
+            z-index: 2; 
+            -webkit-transform: translate3d(30px,30px,200px);
+            -moz-transform: translate3d(30px,30px,200px);
+            -ms-transform: translate3d(30px,30px,200px);
+            -o-transform: translate3d(30px,30px,200px);
+            transform: translate3d(30px,30px,200px);
+        }
+        .s2 img:nth-child(2){
+            z-index: 2; 
+            -webkit-transform: translate3d(30px,30px,-200px);
+            -moz-transform: translate3d(30px,30px,-200px);
+            -ms-transform: translate3d(30px,30px,-200px);
+            -o-transform: translate3d(30px,30px,-200px);
+            transform: translate3d(30px,30px,-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="card text-center gy-transform">
+            <p>
+                Java Architecture for XML Binding (JAXB) allows Java developers to map Java classes to XML representations. JAXB provides two main features: the ability to marshal Java objects into XML and the inverse, i.e. to unmarshal XML back into Java objects. In other words, JAXB allows storing and retrieving data in memory in any XML format, without the need to implement a specific set of XML loading and saving routines for the program's class structure. It is similar to xsd.exe and XmlSerializer in the .NET Framework.
+            </p>
+    </div>
+    <div class="stage s1">
+    <div class="container">
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="70" height="100" />
+        <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="70" height="100" />
+    </div>
+    </div>
+    <div class="stage s2">
+        <div class="container">
+            <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="70" height="100" />
+            <img src="http://www.w3cplus.com/sites/default/files/blogs/2013/1311/cardKingClub.png" alt="" width="70" height="100" />
+        </div>
+    </div>
+</body>
+</html>
